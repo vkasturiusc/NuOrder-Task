@@ -1,0 +1,22 @@
+{
+  "name": "nuorder-task",
+  "version": "1.0.0",
+  "description": "Programming Task from NuOrder",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkasturiusc/NuOrder-Task.git"
+  },
+  "keywords": [
+    "npm"
+  ],
+  "author": "Viswambharan Kasturi Rangarajan (vkasturi@usc.edu)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vkasturiusc/NuOrder-Task/issues"
+  },
+  "homepage": "https://github.com/vkasturiusc/NuOrder-Task#readme"
+}
