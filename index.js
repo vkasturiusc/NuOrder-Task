@@ -1,7 +1,6 @@
 'use strict'
-console.log('Initial Release')
 
-var a = {
+var x = {
     first_name: 'Bob',
     last_name: 'Joness',
     email: 'bob@gmail.com',
@@ -22,7 +21,7 @@ var a = {
     ]
 }
 
-var b = {
+var y = {
     last_name: 'Jones',
     active: true,
     address: {
@@ -67,7 +66,8 @@ function merger(item,a,b){
     return true;
 };
 
-Object.keys(b).forEach(function(key){
-    merger(key,a,b);
+Object.keys(y).forEach(function(key){
+    merger(key,x,y);
 });
-console.log(a);
+
+console.log(x);
