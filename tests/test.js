@@ -18,10 +18,8 @@ var x = {
             {date:'10/22/2012',ip:'192.168.0.1'},
             {date:'10/21/2012',ip:'192.168.0.1'}
     ],
-    photos: [
-        'IMG-1985.jpg',
-        'IMG-1987.jpg'
-    ]
+    photos: 'IMG-1985.jpg'
+        
 }
 
 var y = {
@@ -78,22 +76,16 @@ describe('Testing Object Merger',function(){
         }
 
     });
-    it.only('Sample test case A to B', function(done){
+    it.skip('Sample test case A to B', function(done){
         try{
             let result = index.mergewrapper(y,x);
-            console.log('\n***************************');
+            console.log('\n&&&&&&&&&&&&&&&&&&&&');
             console.log(result);
-            console.log('\n***************************\n');
+            console.log('\n&&&&&&&&&&&&&&&&&&&&\n');
             assert.deepEqual(result_stub,result);
             done();  
         }catch(e){
             done(e);
         }
-
     });
-    /**
-     * it('', function(){
-
-    });
-     */
 });
