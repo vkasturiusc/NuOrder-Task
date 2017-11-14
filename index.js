@@ -1,37 +1,5 @@
 'use strict'
 
-var x = {
-    first_name: 'Bob',
-    last_name: 'Joness',
-    email: 'bob@gmail.com',
-    address: {
-        line_1: '1234 Main St',
-        line_2: 'Apt 413',
-        city: 'Los Angeles',
-        state: 'CA',
-        zip: '90048'
-    },
-    logins: [
-            {date:'10/22/2012',ip:'192.168.0.1'},
-            {date:'10/21/2012',ip:'192.168.0.1'}
-    ],
-    photos: [
-        'IMG-1985.jpg',
-        'IMG-1987.jpg'
-    ]
-}
-
-var y = {
-    last_name: 'Jones',
-    active: true,
-    address: {
-        line_1: '2143 South Main St',
-        line_2: undefined
-    },
-    logins: {date: '10/23/2012',ip:'192.168.0.1'},
-    photos: undefined 
-
-}
 function merger(item,a,b){
     
     if(Array.isArray(a[item])){
@@ -66,8 +34,12 @@ function merger(item,a,b){
     return true;
 };
 
-Object.keys(y).forEach(function(key){
-    merger(key,x,y);
-});
+module.exports.mergewrapper = function mergewrapper(a,b){
+    Object.keys(b).forEach(function(key){
+        merger(key,a,b);
+    });
+    return a;
+}
 
-console.log(x);
+
+//console.log(mergewrapper(x,y));
